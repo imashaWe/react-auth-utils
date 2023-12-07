@@ -29,6 +29,9 @@ export const AuthProvider = <T,>({
     });
   };
 
+  /**
+   * Sign out
+   */
   const signOut = () => {
     setAuthState(null);
   };

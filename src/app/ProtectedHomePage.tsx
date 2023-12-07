@@ -2,17 +2,17 @@ import { useEffect, useState } from 'react';
 import { useAuth } from 'react-auth-utils';
 
 export default function ProtectedHomePage() {
-  const { authState } = useAuth();
+  const { token, signOut } = useAuth();
   const [expireInText, setExpireInText] = useState('');
 
   const handleLogout = () => {
-    alert('Logout success');
+    signOut();
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
-      const expireIn = (authState?.expiresAt ?? 0) - now;
+      const expireIn = (token.expiresAt ?? 0) - now;
       if (expireIn) {
         const minutes = Math.floor(expireIn / 1000 / 60);
         const seconds = Math.floor((expireIn / 1000) % 60);
@@ -22,7 +22,7 @@ export default function ProtectedHomePage() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [authState?.expiresAt]);
+  }, [token?.expiresAt]);
 
   return (
     <div className="flex flex-col h-screen justify-center items-center">

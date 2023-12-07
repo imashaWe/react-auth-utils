@@ -8,7 +8,10 @@ export const useAuth = <T>() => {
 
   const isAuthenticated = !!authState;
   const user = authState?.user;
-  const token = authState?.token;
+  const token = {
+    token: authState?.token,
+    expiresAt: authState?.expiresAt,
+  };
 
-  return { authState, isAuthenticated, user, token, signIn, signOut };
+  return { isAuthenticated, user, token, signIn, signOut };
 };

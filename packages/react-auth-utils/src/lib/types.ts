@@ -9,11 +9,23 @@ export interface AuthState<T = any> {
 }
 
 export interface SignInOption {
+  /**
+   * @default false
+   * To remember user session in cookies
+   * */
   isRemembered?: boolean;
 }
 
 export interface AuthContextInterface<T> {
   authState: AuthState<T> | null;
+  /**
+   * Sign in with JWT token
+   * @param token - JWT token
+   * @param expiresAt - JWT token expiration time
+   * @param user - User object
+   * @param isRemembered - If true, the token will be stored in Cookies
+   * @returns void
+   */
   signIn: (
     token: string,
     expiresAt?: number,
@@ -23,7 +35,23 @@ export interface AuthContextInterface<T> {
   signOut: () => void;
 }
 
+/**
+ * Represents the props for an authentication provider component.
+ * @template T - The type of the authentication state.
+ */
 export interface AuthProviderProps<T> {
   children: React.ReactNode;
-  onAuthStateChange?: (authData: AuthState<T> | null) => void;
+  /**
+   * @function  - A callback function that is called when the authentication state changes.
+   * @param authState - The authentication state.
+   * @returns void
+   * @default undefined
+   * @example
+   * ```tsx
+   * const onAuthStateChange = (authState: AuthState | null) => {
+   *  console.log(authState);
+   * }
+   * ```
+   */
+  onAuthStateChange?: (authState: AuthState<T> | null) => void;
 }
