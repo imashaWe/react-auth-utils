@@ -32,7 +32,19 @@ export interface AuthContextInterface<T> {
     user?: T,
     options?: SignInOption
   ) => void;
+
+  /**
+   * Sign out
+   * @returns void
+   */
   signOut: () => void;
+
+  /**
+   * Update user object
+   * @param user - User object
+   * @returns void
+   * */
+  updateUser: (user: T) => void;
 }
 
 /**

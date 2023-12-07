@@ -29,17 +29,19 @@ export const AuthProvider = <T,>({
     });
   };
 
-  /**
-   * Sign out
-   */
   const signOut = () => {
     setAuthState(null);
+  };
+
+  const updateUser = (user: T) => {
+    setAuthState({ ...authState!, user: user });
   };
 
   const value: AuthContextInterface<T> = {
     authState,
     signIn,
     signOut,
+    updateUser,
   };
 
   useEffect(() => {
