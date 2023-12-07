@@ -10,9 +10,9 @@ export const RequireAuth: FC<PropsWithChildren<RequireAuthProps>> = ({
   unauthenticated,
 }) => {
   const { isAuthenticated } = useAuth();
-  console.log('isAuthenticated', isAuthenticated);
+
   if (isAuthenticated) {
-    children;
+    return children;
   }
 
   if (!isAuthenticated && unauthenticated) {
