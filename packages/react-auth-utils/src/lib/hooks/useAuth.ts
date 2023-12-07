@@ -6,7 +6,7 @@ export const useAuth = <T>() => {
   const { authState, signIn, signOut } =
     useContext<AuthContextInterface<T>>(AuthContext);
 
-  const isAuthenticated = authState !== null;
+  const isAuthenticated = !!authState;
   const user = authState?.user;
   const token = authState?.token;
 
