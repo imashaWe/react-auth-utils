@@ -12,7 +12,7 @@ export const AuthProvider = <T,>({
   onAuthStateChange,
 }: AuthProviderProps<T>) => {
   const [authState, setAuthState] = useState<AuthState<T> | null>(null);
-  console.log('AuthProvider', authState);
+
   const signIn = (
     token: string,
     expiresAt?: number,
@@ -21,7 +21,6 @@ export const AuthProvider = <T,>({
       isRemembered: false,
     }
   ) => {
-    console.log('signIn', token, expiresAt, user, isRemembered);
     setAuthState({
       token,
       expiresAt: expiresAt,
