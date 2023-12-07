@@ -1,0 +1,40 @@
+{
+  "name": "react-auth-utils",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-auth-utils/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/react-auth-utils",
+        "main": "packages/react-auth-utils/src/index.ts",
+        "tsConfig": "packages/react-auth-utils/tsconfig.lib.json",
+        "assets": ["packages/react-auth-utils/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs react-auth-utils {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/react-auth-utils/**/*.ts",
+          "packages/react-auth-utils/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/react-auth-utils/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
