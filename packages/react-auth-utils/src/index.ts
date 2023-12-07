@@ -1,1 +1,2 @@
-export * from './lib/react-auth-utils';
+export * from './lib/AuthProvider';
+export * from './lib/hooks/useAuth';
