@@ -10,7 +10,7 @@ export default function LoginPage() {
   const navigator = useNavigate();
 
   const handleLogin = () => {
-    if (true) {
+    if (username === 'admin' && password === 'admin') {
       const fakeJWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.';
       const expireIn2MinFromNow = Date.now() + 2 * 60 * 1000;
       const fakeUser = {

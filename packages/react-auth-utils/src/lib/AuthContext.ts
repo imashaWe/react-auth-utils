@@ -6,4 +6,5 @@ export const AuthContext = createContext<AuthContextInterface<any>>({
   authState: null,
   signIn: () => {},
   signOut: () => {},
+  updateUser: () => {},
 });
