@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "publish:react-auth-utils": "cd packages/react-auth-utils && npm publish"
   },
   "private": true,
   "dependencies": {
