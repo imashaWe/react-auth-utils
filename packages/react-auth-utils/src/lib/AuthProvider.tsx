@@ -7,11 +7,14 @@ import {
 } from './types';
 import { AuthContext } from './AuthContext';
 
+const AUTH_STATE_KEY = 'AUTH_STATE';
+
 export const AuthProvider = <T,>({
   children,
   onAuthStateChange,
 }: AuthProviderProps<T>) => {
   const [authState, setAuthState] = useState<AuthState<T> | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
   const signIn = (
     token: string,
@@ -31,6 +34,7 @@ export const AuthProvider = <T,>({
 
   const signOut = () => {
     setAuthState(null);
+    localStorage.removeItem(AUTH_STATE_KEY);
   };
 
   const updateUser = (user: T) => {
@@ -69,6 +73,30 @@ export const AuthProvider = <T,>({
 
     return () => {};
   }, [authState]);
+
+  useEffect(() => {
+    if (!authState) return;
+
+    if (authState?.isRemembered) {
+      // TODO: Implement remember me: Cookie
+    } else {
+      localStorage.setItem(AUTH_STATE_KEY, JSON.stringify(authState));
+    }
+  }, [authState]);
+
+  useEffect(() => {
+    const authStateFromLocalStorage = localStorage.getItem(AUTH_STATE_KEY);
+
+    if (authStateFromLocalStorage) {
+      setAuthState(JSON.parse(authStateFromLocalStorage));
+    } else {
+      // TODO: Load from Cookies
+    }
+
+    setLoaded(true);
+  }, []);
+
+  if (!loaded) return null;
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
