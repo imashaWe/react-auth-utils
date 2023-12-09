@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "Simple and lightweight React authentication library for seamless user authentication in your projects.",
   "dependencies": {
+    "react": "^18.2.0",
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
