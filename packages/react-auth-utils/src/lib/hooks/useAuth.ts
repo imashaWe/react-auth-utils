@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { AuthContextInterface } from '../types';
-import { AuthContext } from '../AuthContext';
+import AuthContext from '../AuthContext';
 
-export const useAuth = <T>() => {
+const useAuth = <T>() => {
   const { authState, signIn, signOut } =
     useContext<AuthContextInterface<T>>(AuthContext);
 
@@ -15,3 +15,5 @@ export const useAuth = <T>() => {
 
   return { isAuthenticated, user, token, signIn, signOut };
 };
+
+export default useAuth;

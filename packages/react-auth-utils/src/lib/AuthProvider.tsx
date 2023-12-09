@@ -5,11 +5,11 @@ import {
   SignInOption,
   AuthProviderProps,
 } from './types';
-import { AuthContext } from './AuthContext';
+import AuthContext from './AuthContext';
 
 const AUTH_STATE_KEY = 'AUTH_STATE';
 
-export const AuthProvider = <T,>({
+const AuthProvider = <T,>({
   children,
   onAuthStateChange,
 }: AuthProviderProps<T>) => {
@@ -100,3 +100,5 @@ export const AuthProvider = <T,>({
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
+
+export default AuthProvider;

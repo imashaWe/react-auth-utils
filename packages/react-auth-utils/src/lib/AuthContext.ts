@@ -2,9 +2,11 @@
 import { createContext } from 'react';
 import { AuthContextInterface } from './types';
 
-export const AuthContext = createContext<AuthContextInterface<any>>({
+const AuthContext = createContext<AuthContextInterface<any>>({
   authState: null,
   signIn: () => {},
   signOut: () => {},
   updateUser: () => {},
 });
+
+export default AuthContext;

@@ -1,11 +1,11 @@
 import { FC, PropsWithChildren } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import useAuth from '../hooks/useAuth';
 
 interface RequireAuthProps {
   unauthenticated?: React.ReactNode;
 }
 
-export const RequireAuth: FC<PropsWithChildren<RequireAuthProps>> = ({
+const RequireAuth: FC<PropsWithChildren<RequireAuthProps>> = ({
   children,
   unauthenticated,
 }) => {
@@ -21,3 +21,5 @@ export const RequireAuth: FC<PropsWithChildren<RequireAuthProps>> = ({
 
   return null;
 };
+
+export default RequireAuth;
