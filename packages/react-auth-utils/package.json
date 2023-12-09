@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/imashaWe/react-auth-utils/issues"
   },
-  "homepage": "https://github.com/imashaWe/react-auth-utils"
+  "homepage": "https://github.com/imashaWe/react-auth-utils",
+  "publishConfig": {
+    "access": "public"
+  }
 }

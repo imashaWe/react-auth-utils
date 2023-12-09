@@ -34,6 +34,12 @@
       "options": {
         "jestConfig": "packages/react-auth-utils/jest.config.ts"
       }
+    },
+    "release": {
+      "executor": "nx-release:build-update-publish",
+      "options": {
+        "libName": "react-auth-utils"
+      }
     }
   },
   "tags": []
