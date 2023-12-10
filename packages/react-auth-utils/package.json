@@ -10,13 +10,6 @@
   "src": "src/index.ts",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "lib/__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "react",
     "authentication",
