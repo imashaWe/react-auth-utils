@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/imashaWe/react-auth-utils/compare/v1.0.0...v1.0.1) (2023-12-10)
+
+
+### Bug Fixes
+
+* source-map-loader issue ([d381b21](https://github.com/imashaWe/react-auth-utils/commit/d381b2116fd9b232dad792e4c2f4d0cb90234ad4))
+
 ## 1.0.0 (2023-12-09)
 
 
