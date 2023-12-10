@@ -7,8 +7,16 @@
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
+  "src": "src/index.ts",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "lib/__tests__"
+  },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "react",
     "authentication",
@@ -22,7 +30,7 @@
     "authentication-utils",
     "jwt"
   ],
-  "author": "Your Name",
+  "author": "Imasha Weerakoon | imasha98.we@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
