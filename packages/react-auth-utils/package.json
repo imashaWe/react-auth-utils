@@ -3,8 +3,6 @@
   "version": "0.0.3",
   "description": "Simple and lightweight React authentication library for seamless user authentication in your projects.",
   "dependencies": {
-    "@types/js-cookie": "^3.0.6",
-    "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "tslib": "^2.3.0"
   },
