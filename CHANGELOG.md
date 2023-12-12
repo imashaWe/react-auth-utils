@@ -1,3 +1,20 @@
+## [1.0.2](https://github.com/imashaWe/react-auth-utils/compare/v1.0.1...v1.0.2) (2023-12-10)
+
+
+### Bug Fixes
+
+* Module not found issue ([5b50755](https://github.com/imashaWe/react-auth-utils/commit/5b50755e38030634aa4d7c1fbd6ae877b0e84d32))
+
+
+### Chores
+
+* **release:** -v1.0.1 [skip ci] ([68586ec](https://github.com/imashaWe/react-auth-utils/commit/68586ecc506c1f555dd8f7a2e06852c1aa5d3add))
+
+
+### Refactoring
+
+* remove unused test ([70fadc1](https://github.com/imashaWe/react-auth-utils/commit/70fadc1138be7f12fbb6716578b4b799f08e6678))
+
 ## [1.0.1](https://github.com/imashaWe/react-auth-utils/compare/v1.0.0...v1.0.1) (2023-12-10)
 
 
