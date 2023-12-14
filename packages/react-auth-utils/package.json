@@ -2,10 +2,6 @@
   "name": "react-auth-utils",
   "version": "0.0.3",
   "description": "Simple and lightweight React authentication library for seamless user authentication in your projects.",
-  "dependencies": {
-    "react": "^18.2.0",
-    "tslib": "^2.3.0"
-  },
   "type": "commonjs",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
@@ -34,5 +30,13 @@
   "homepage": "https://github.com/imashaWe/react-auth-utils",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6"
   }
 }
