@@ -6,7 +6,6 @@ import {
   AuthProviderProps,
 } from './types';
 import AuthContext from './AuthContext';
-import Cookies from 'js-cookie';
 
 const AUTH_STATE_KEY = 'AUTH_STATE';
 
@@ -36,7 +35,6 @@ const AuthProvider = <T,>({
   const signOut = () => {
     setAuthState(null);
     localStorage.removeItem(AUTH_STATE_KEY);
-    Cookies.remove(AUTH_STATE_KEY);
   };
 
   const updateUser = (user: T) => {
@@ -80,7 +78,8 @@ const AuthProvider = <T,>({
     if (!authState) return;
 
     if (authState?.isRemembered) {
-      Cookies.set(AUTH_STATE_KEY, JSON.stringify(authState));
+      // TODO: Cookie implementation
+
     } else {
       localStorage.setItem(AUTH_STATE_KEY, JSON.stringify(authState));
     }
@@ -92,11 +91,7 @@ const AuthProvider = <T,>({
     if (authStateFromLocalStorage) {
       setAuthState(JSON.parse(authStateFromLocalStorage));
     } else {
-      const authStateFromCookies = Cookies.get(AUTH_STATE_KEY);
-
-      if (authStateFromCookies) {
-        setAuthState(JSON.parse(authStateFromCookies));
-      }
+       // TODO: Cookie implementation
     }
 
     setLoaded(true);
