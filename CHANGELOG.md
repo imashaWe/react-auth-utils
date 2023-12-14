@@ -1,3 +1,23 @@
+## [1.1.0](https://github.com/imashaWe/react-auth-utils/compare/v1.0.2...v1.1.0) (2023-12-14)
+
+
+### Features
+
+* installed js-cookie ([2320e35](https://github.com/imashaWe/react-auth-utils/commit/2320e350345356ebdfb433f462f07c3386d0f9ae))
+* RememberMe ([829ccdb](https://github.com/imashaWe/react-auth-utils/commit/829ccdb2b13a0da24fb85d16dba2d4892e541598))
+
+
+### Bug Fixes
+
+* cookie implementation issue ([275beae](https://github.com/imashaWe/react-auth-utils/commit/275beae860617b6d57b73a6e8e216cba8c5d30b5))
+* eslint problem ([0ad9bc4](https://github.com/imashaWe/react-auth-utils/commit/0ad9bc45e44767902d257b894f4b62890ec0b0f1))
+
+
+### Chores
+
+* disabled source map ([6547658](https://github.com/imashaWe/react-auth-utils/commit/654765849e3e35a51945c2575d1cd5bd0cdc60a8))
+* lining ([b4b5e95](https://github.com/imashaWe/react-auth-utils/commit/b4b5e95374802750d6c9f6ce32c89a3e043a2b6a))
+
 ## [1.0.2](https://github.com/imashaWe/react-auth-utils/compare/v1.0.1...v1.0.2) (2023-12-10)
 
 
